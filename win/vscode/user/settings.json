@@ -1,0 +1,130 @@
+{
+    "editor.lineNumbers": "relative",
+    "vim.leader": "<Space>",
+    "vim.useSystemClipboard": true,
+    "vim.foldfix": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+    // Normal Mode
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+
+    { "before": ["d"], "after": ["\"", "_", "d"]},
+    
+    { "before": ["x"], "after": ["\"", "_", "x"]},
+
+    { "before": ["c"], "after": ["\"", "_", "c"]},
+
+    {"before": ["<leader>", "d"], "after": ["d"]},
+
+    {"before": ["<leader>", "g"], "commands": ["editor.action.showDefinitionPreviewHover"]},
+
+    {"before": ["<leader>", "a"], "commands": ["workbench.panel.chat"], "when": "workbench.panel.chat.view.copilot.active"},
+
+    {"before": ["<leader>", "n"], "commands": ["welcome.showNewFileEntries"]},
+
+    // NAVIGATION 
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+ 
+    //move lines up and down
+    { "before": ["<S-k>"], "commands": ["editor.action.moveLinesUpAction"] },
+    { "before": ["<S-j>"], "commands": ["editor.action.moveLinesDownAction"] },
+ 
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+    {"before": ["<leader>", "o"], "after": ["<C-w>", "<C-o>"]},
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    { "before": ["leader", "w"], "commands": [":w"] },
+    { "before": ["leader", "q"], "commands": [":q"] },
+    { "before": ["leader", "x"], "commands": [":x"] },
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+
+    ],
+    "workbench.colorTheme": "Dracula Soft",
+    "files.autoSave": "afterDelay",
+    "editor.minimap.enabled": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "python.defaultInterpreterPath": "C:\\Users\\mathe\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+    "python.REPL.enableREPLSmartSend": false,
+    "glassit.alpha": 255,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.preferredAccount": "",
+    "hediet.vscode-drawio.resizeImages": null,
+    "hediet.vscode-drawio.theme": "kennedy",
+    "hediet.vscode-drawio.appearance": "dark",
+    "database-client.autoSync": true,
+    "github.copilot.advanced": {
+ 
+    },
+    "github.copilot.enable": {
+      "*": false,
+      "plaintext": false,
+      "markdown": false,
+      "scminput": false,
+      "python": false
+    },
+    "leetcode.workspaceFolder": "/home/matdev16/devel/studies/algo/leetcode",
+   // configuração para formatador de código Prettier
+    "editor.formatOnSave": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.persistentSessionReviveProcess": "onExitAndWindowClose",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    // "leetcode.defaultLanguage": "python3",
+    // "restoreTerminals.terminals": [
+
+    // ]
+}

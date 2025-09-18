@@ -1,0 +1,109 @@
+// Coloque as suas associações de teclas neste arquivo para substituir os padrões
+[
+    // NAVIGATION
+  {
+  "key": "ctrl+shift+r",
+  "command": "workbench.action.terminal.rename",
+  "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+
+
+  // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+e"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "inlineChat.start", 
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.toggleZenMode"
+  },
+
+  // vim remap
+
+    // EDITOR
+    {
+        "key": "shift+alt+n",
+        "command": "toggleVim"
+    },
+    {
+        "key": "ctrl+alt+z",
+        "command": "glassit.increase"
+    },
+    {
+        "key": "ctrl+alt+z",
+        "command": "-glassit.increase"
+    },
+    {
+      "key": "ctrl+alt+i",
+      "command": "-workbench.panel.chat",
+      "when": "workbench.panel.chat.view.copilot.active"
+    },
+    {
+  "key": "ctrl+t",
+  "command": "workbench.action.focusFirstEditorGroup"
+},
+{
+  "key": "ctrl+m",
+  "command": "workbench.action.terminal.chat.start",
+  "when": "chatIsEnabled && terminalChatAgentRegistered && terminalFocusInAny && terminalHasBeenCreated || chatIsEnabled && terminalChatAgentRegistered && terminalFocusInAny && terminalProcessSupported"
+},
+{
+  "key": "ctrl+i",
+  "command": "-workbench.action.terminal.chat.start",
+  "when": "chatIsEnabled && terminalChatAgentRegistered && terminalFocusInAny && terminalHasBeenCreated || chatIsEnabled && terminalChatAgentRegistered && terminalFocusInAny && terminalProcessSupported"
+}
+]
