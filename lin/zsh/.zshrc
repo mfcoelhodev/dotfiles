@@ -2,6 +2,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
+source <(fzf --zsh)
+
 ### --- Theme (Powerlevel10k) ---
 # Powerlevel10k instant prompt for fast startup
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -131,14 +133,14 @@ fda() {
   local dir
   dir=$(find ~ -path '*/\.*' -prune -o -type d -print 2>/dev/null | fzf +m) && cd "$dir"
 }
-fd() {
+fdi() {
   DIR=$(find . -type d -print 2>/dev/null | fzf-tmux) && cd "$DIR"
 }
-ffa() {
+foa() {
   IFS=$'\n' files=($(find ~ -type f 2>/dev/null | fzf --multi --preview="bat --color=always {}"))
   [[ -n "$files" ]] && ${EDITOR:-nvim} "${files[@]}"
 }
-ff() {
+fo() {
   IFS=$'\n' files=($(fzf-tmux --multi --select-1 --exit-0 --preview="bat --color=always {}"))
   [[ -n "$files" ]] && ${EDITOR:-nvim} "${files[@]}"
 }
